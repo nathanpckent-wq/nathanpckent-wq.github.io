@@ -1,0 +1,7 @@
+.replit
+.vscode/
+_site/*
+.jekyll-cache/*
+.jekyll-metadata
+**/.DS_Store
+.idea/*

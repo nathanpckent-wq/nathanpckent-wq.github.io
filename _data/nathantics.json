@@ -1,0 +1,68 @@
+{
+  "testimonials": [
+    "Nathantics helped us double our conversion rate in six months. The training was practical, engaging, and transformed how our team sells and supports customers.",
+    "The assessment uncovered inefficiencies across our departments we didn’t even realize were connected. We now have a clear structure, motivated teams, and better results.",
+    "What stood out was the empathy and understanding of team dynamics — not just processes and KPIs. Nathan made real change happen.",
+    "I forgot what was truely important, Nathan showed me this and I now love my work again."
+  ],
+  "services": [
+    {
+      "index": 1,
+      "title": "Business Assessments",
+      "description": "A deep, data-informed analysis of your organization — from sales and service to operations and team dynamics.\nI’ll identify hidden inefficiencies, cultural blockers, and untapped opportunities, delivering a clear, actionable roadmap for improvement."
+    },
+    {
+      "index": 2,
+      "title": "Sales & CX Training",
+      "description": "Customized training programs and workshops designed to elevate team performance, customer engagement, and conversion rates.\nI focus on real-world application — no generic slides, just meaningful change."
+    },
+    {
+      "index": 3,
+      "title": "Strategic Transformation",
+      "description": "I work alongside you to implement changes that stick — from process design and leadership alignment to performance measurement and technology integration."
+    }
+  ],
+  "howItWorks": [
+    {
+      "index": 1,
+      "title": "Assess",
+      "description": "We start with an in-depth look at your business landscape — people, processes, performance, and customer experience.",
+    },
+    {
+      "index": 2,
+      "title": "Optimize",
+      "description": "Together, we identify what’s working, what’s not, and where efficiencies or improvements can drive measurable results.",
+    },
+    {
+      "index": 3,
+      "title": "Empower",
+      "description": "I deliver tailored training, coaching, and system improvements that empower your teams and leaders to sustain performance over the long term.",
+    }
+  ],
+  "landingPage": {
+    "headline": "Transform Your Sales, CX & Operations from the Inside Out",
+    "subHeadline": "I help startups and established companies uncover what’s holding them back — and equip their teams, systems, and strategies to perform at their best.",
+    "cta": {
+      "text": "Book a Free Discovery Call",
+      "link": "#"
+    },
+    "supportingLine": "Sales | Customer Experience | Operational Efficiency | Leadership | Technology Integration"
+  },
+  "footer": {
+    "text": "© 2025 Nathantics. All rights reserved.",
+    "links": [
+        {
+            "name": "Privacy Policy",
+            "url": "#"
+        },
+        {
+            "name": "Business Performance Consulting",
+            "url": "#"
+        }
+    ]
+  },
+  "about": [
+    "With over 20 years of experience leading sales, customer experience, and business transformation across diverse industries, I’ve helped startups scale fast and guided established organizations to higher performance and stronger culture.",
+    "I bring together deep commercial understanding, team alignment expertise, and a holistic view of how your entire organization operates — not just your sales numbers."
+  ]
+}

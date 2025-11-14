@@ -1,0 +1,62 @@
+<script>
+  const template = `<div id="biscuitBanner" class="absolute left-0 top-0 z-10 w-full hidden">
+  <div class="h-full w-full bg-gray-100 p-4 text-black">
+    <div class="grid grid-cols-12 gap-2">
+      <div id="text" class="col-span-11 text-xl">Hello! Just a heads up, this website uses cookies! Here's one for you: 🍪</div>
+      <div id="text" class="col-span-1 m-auto sm:m-0 sm:place-self-end">
+        <a id="closeBiscuitBanner" class="hover:text-gray-300">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`
+
+  const cookieStorage = {
+    getItem: (key) => {
+      const cookies = document.cookie
+        .split(';')
+        .map(cookie => cookie.split('='))
+        .reduce((acc, [key, value]) => ({
+          ...acc,
+          [key.trim()]: value
+        }), {});
+      return cookies[key];
+    },
+    setItem: (key, value, cname, expire) => {
+      document.cookie = `${key}=${value};path=/;cname=${cname};expires=${expire.toGMTString()}`
+    }
+  }
+
+  window.onload = () => {
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-BWFMQZ2CQB');
+
+    const storageType = cookieStorage;
+    const consentPropertyName = 'stiaannel_consent_biscuit'
+    const cname = 'stiaannel.co.za'
+    let expire = new Date();
+    expire.setFullYear(expire.getFullYear() + 1);
+    const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+    const saveToStorage = () => storageType.setItem(consentPropertyName, true, cname, expire);
+
+    document.querySelector('body').insertAdjacentHTML("beforeend", template);
+
+    // Allow GTM/GA
+
+    if (shouldShowPopup()) {
+      document.getElementById('biscuitBanner').classList.toggle('hidden');
+    }
+
+    document.getElementById('closeBiscuitBanner').addEventListener('click', () => {
+      document.getElementById('biscuitBanner').classList.toggle('hidden');
+      saveToStorage();
+    });
+  };
+</script>

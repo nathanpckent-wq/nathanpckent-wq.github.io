@@ -1,0 +1,8 @@
+<h2 class="text-5xl lg:text-6xl font-bold p-8 md:p-16">About Nathantics<span class="text-charcoal-500">.</span></h2>
+<div class="h-fit px-8 md:px-16 flex flex-col lg:flex-row">
+  <div class="flex gap-4 flex-col">
+    {% for aboutline in site.data.nathantics.about %}
+    <p class="text-xl">{{ aboutline }}</p>
+    {% endfor %}
+  </div>
+</div>

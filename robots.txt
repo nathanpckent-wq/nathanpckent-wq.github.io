@@ -1,0 +1,6 @@
+# This robots.txt file controls crawling of URLs under https://stiaannel.co.za.
+
+User-agent: *
+Disallow: 
+
+Sitemap: https://stiaannel.co.za/sitemap.xml

@@ -1,0 +1,8 @@
+<h2 class="text-5xl lg:text-6xl font-bold p-8 md:p-16 w-full">Testimonials<span class="text-charcoal-500">.</span></h2>
+<div class="h-fit px-8 md:px-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    {% for testimonial in site.data.nathantics.testimonials %}
+    <p class="text-xl !italic">"{{ testimonial }}"</p>
+    {% endfor %}
+  </div>
+</div>
