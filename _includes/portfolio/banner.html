@@ -1,15 +1,15 @@
-<div class="h-96 flex flex-col p-16 lg:flex-row lg:align-middle lg:justify-center select-none content-blur gap-16">
+<div class="flex flex-col p-16 lg:flex-row lg:align-middle lg:justify-center select-none content-blur gap-16 bg-gray-200">
 <!--  <div id="image" class="m-auto p-8 border-2 border-solid border-charcoal-500 rounded-full">-->
 <!--    <div class="w-50 h-50 text-transparent">Image goes here</div>-->
 <!--  </div>-->
-  <div id="headline" class="m-auto w-fit lg:max-w-md xl:max-w-full">
+  <div id="headline" class="m-auto w-fit flex flex-col gap-4 h-fit">
     <h1 class="text-6xl md:text-5xl lg:text-7xl font-black">
-      <span class="text-charcoal-500">{{ site.data.nathantics.landingPage.headline }}</span>
+      <span class="bg-gradient-to-l from-blue-400 to-sky-800 bg-clip-text text-transparent">{{ site.data.nathantics.landingPage.headline }}</span>
     </h1>
-    <p class="text-xl">{{ site.data.nathantics.landingPage.subHeadline}}</p>
+    <p class="text-2xl">{{ site.data.nathantics.landingPage.subHeadline}}</p>
     <div class="py-2 flex gap-4">
       <a href="{{ site.data.nathantics.landingPage.cta.link }}"
-        class="py-2 px-4 rounded-xl text-white border-charcoal-500 border-solid border-2 bg-charcoal-500 hover:bg-opacity-75">{{ site.data.nathantics.landingPage.cta.text }}</a>
+        class="py-2 px-4 rounded-xl text-white border-blue-500 border-solid border-2 bg-blue-600 hover:bg-opacity-75">{{ site.data.nathantics.landingPage.cta.text }}</a>
 <!--      <a target="_blank" href="https://github.com/stiaannel" class="py-2 px-4 rounded-xl border-primary-blue border-solid border-2 hover:opacity-75">Secondary</a>-->
     </div>
   </div>
