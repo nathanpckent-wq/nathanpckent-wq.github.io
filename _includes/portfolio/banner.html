@@ -1,15 +1,23 @@
-<div class="flex flex-col py-24 px-12 lg:flex-row lg:align-middle lg:justify-center select-none content-blur gap-16 bg-gray-200 h-2/3">
-<!--  <div id="image" class="m-auto p-8 border-2 border-solid border-charcoal-500 rounded-full">-->
-<!--    <div class="w-50 h-50 text-transparent">Image goes here</div>-->
-<!--  </div>-->
-  <div id="headline" class="m-auto w-fit flex flex-col gap-4 h-fit">
-    <h1 class="text-6xl md:text-5xl lg:text-7xl font-black">
-      <span class="bg-gradient-to-l from-blue-400 to-sky-800 bg-clip-text text-transparent">{{ site.data.nathantics.landingPage.headline }}</span>
-    </h1>
-    <p class="text-2xl">{{ site.data.nathantics.landingPage.subHeadline}}</p>
-    <div class="py-2 flex gap-4">
-      <a href="{{ site.data.nathantics.landingPage.cta.link }}"
-        class="py-2 px-4 rounded-xl text-white border-blue-500 border-solid border-2 bg-blue-600 hover:bg-opacity-75">{{ site.data.nathantics.landingPage.cta.text }}</a>
+<section class="relative py-32 px-6 bg-slate-200 overflow-hidden">
+  <!-- Background image slot -->
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+       style="background-image: url('/assets/images/discussion.jpeg')"></div>
+  <!-- Optional dark overlay for contrast, uncomment if needed -->
+  <!-- <div class="absolute inset-0 bg-slate-900/40"></div> -->
+
+  <div class="relative h-full w-full mx-auto backdrop-blur-sm flex items-center max-w-7xl">
+    <div class="max-w-3xl flex flex-col gap-6">
+      <h1 class="text-6xl lg:text-7xl font-black leading-tight">
+        <span class="text-slate-900">{{ site.data.nathantics.landingPage.headline }}</span><br/>
+        <span class="bg-gradient-to-l from-blue-400 to-sky-800 bg-clip-text text-transparent">{{ site.data.nathantics.landingPage.headlineBottom }}</span>
+      </h1>
+      <p class="text-lg text-slate-600 max-w-xl">{{ site.data.nathantics.landingPage.subHeadline }}</p>
+      <div class="flex gap-4">
+        <a href="{{ site.data.nathantics.landingPage.cta.link }}"
+           class="py-3 px-6 rounded-xl text-white border-blue-500 border-solid border-2 bg-blue-600 hover:bg-opacity-75 transition-all duration-200 font-medium">
+          {{ site.data.nathantics.landingPage.cta.text }}
+        </a>
+      </div>
     </div>
   </div>
-</div>
+</section>
