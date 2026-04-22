@@ -1,6 +1,6 @@
-# This robots.txt file controls crawling of URLs under https://stiaannel.co.za.
+# This robots.txt file controls crawling of URLs under https://nathantics.com
 
 User-agent: *
 Disallow: 
 
-Sitemap: https://stiaannel.co.za/sitemap.xml
+Sitemap: https://nathantics.com/sitemap.xml

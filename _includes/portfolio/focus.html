@@ -1,12 +1,52 @@
-<h2 class="text-5xl lg:text-6xl font-bold p-8 md:p-16 w-full">Our focus<span class="text-charcoal-500">.</span></h2>
-<div class="h-fit px-8 md:px-16">
-  <div class="flex gap-4 flex-col">
-    <ul class="list-disc pl-6">
-      <li class="text-xl">Sales & CX Optimization</li>
-      <li class="text-xl">Operational Efficiency & Process Improvement</li>
-      <li class="text-xl">Leadership, Morale & Team Culture</li>
-      <li class="text-xl">Neurodiversity & Inclusive Workplaces</li>
-      <li class="text-xl">Change Management & Growth Strategy</li>
-    </ul>
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-16">
+      Our focus.
+    </h2>
+
+    {% assign rotations = "2deg,-1.5deg,2.5deg,-2deg,1.5deg" | split: "," %}
+    {% assign colors = "bg-yellow-50,bg-sky-50,bg-rose-50,bg-emerald-50,bg-violet-50" | split: "," %}
+    {% assign pin_colors = "bg-yellow-400,bg-sky-400,bg-rose-400,bg-emerald-400,bg-violet-400" | split: "," %}
+
+    <div class="flex flex-wrap justify-center gap-8" id="focus-cards">
+      {% for item in site.data.nathantics.focusAreas %}
+      {% assign rot_index = forloop.index0 | modulo: 5 %}
+      {% assign rot = rotations[rot_index] %}
+      {% assign color = colors[rot_index] %}
+      {% assign pin_color = pin_colors[rot_index] %}
+      <div class="{{ color }} rounded-sm p-6 pt-8 shadow-md hover:shadow-xl relative"
+           style="transform: rotate({{ rot }}); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+           onmouseover="this.style.transform='rotate(0deg)'"
+           onmouseout="this.style.transform='rotate({{ rot }})'">
+        <!-- Pin -->
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 flex flex-col items-center">
+          <div class="{{ pin_color }} pin-dot w-4 h-4 rounded-full shadow-md border-2 border-white"></div>
+          <div class="w-px h-3 bg-slate-300"></div>
+        </div>
+        <p class="text-slate-700 font-semibold text-center leading-snug">{{ item }}</p>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
+<script>
+  const container = document.getElementById('focus-cards');
+  const cards = Array.from(container.children);
+  const colors = ['bg-yellow-50','bg-sky-50','bg-rose-50','bg-emerald-50','bg-violet-50'];
+  const pins = ['bg-yellow-400','bg-sky-400','bg-rose-400','bg-emerald-400','bg-violet-400'];
+
+  // Shuffle colors
+  const shuffled = [...colors].sort(() => Math.random() - 0.5);
+
+  cards.forEach((card, i) => {
+    const old = colors[i % colors.length];
+    const newColor = shuffled[i % shuffled.length];
+    const newPin = pins[colors.indexOf(newColor)];
+
+    card.classList.replace(old, newColor);
+
+    const pin = card.querySelector('.pin-dot');
+    pins.forEach(p => pin.classList.remove(p));
+    pin.classList.add(newPin);
+  });
+</script>

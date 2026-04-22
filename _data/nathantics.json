@@ -41,7 +41,7 @@
   ],
   "landingPage": {
     "headline": "Transform Your Sales, CX & Operations from the Inside Out",
-    "subHeadline": "I help startups and established companies uncover what’s holding them back - and equip their teams, systems and strategies to perform at their best.",
+    "subHeadline": "I help startups and established companies uncover what’s holding them back. I then equip their teams, systems and strategies to perform at their best.",
     "cta": {
       "text": "Book a Free Discovery Call",
       "link": "https://nathanpckent.youcanbook.me/"
@@ -64,5 +64,12 @@
   "about": [
     "With over 20 years of experience leading sales, customer experience and business transformation across diverse industries, I’ve helped startups scale fast and guided established organizations to higher performance and stronger culture.",
     "I bring together deep commercial understanding, team alignment expertise and a holistic view of how your entire organization operates - not just your sales numbers."
+  ],
+  "focusAreas": [
+    "Sales Performance & Strategy",
+    "Customer Experience & Retention",
+    "Operational Efficiency & Process Design",
+    "Leadership Development & Team Alignment",
+    "Technology Integration for Sales & CX"
   ]
 }

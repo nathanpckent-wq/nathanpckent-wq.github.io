@@ -1,14 +1,36 @@
-<h2 class="text-5xl lg:text-6xl font-bold p-8 md:p-16 w-full">How it works<span class="text-charcoal-500">.</span></h2>
-<div class="h-fit px-8 md:px-16">
-  <div class="flex flex-col md:flex-row justify-evenly gap-4">
-    {% for step in site.data.nathantics.howItWorks %}
-    <div class="flex gap-4 w-full">
-      <p class="rounded-full p-4 bg-black text-white h-10 w-10 flex flex-col align-middle justify-center">{{ step.index }}</p>
-      <div class="flex flex-col gap-2">
-        <p class="text-xl !italic">{{ step.title }}</p>
-        <p class="text-md !italic">{{ step.description }}</p>
+<section class="py-20 px-6 bg-slate-50">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-16">
+      How it works.
+    </h2>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      {% for step in site.data.nathantics.howItWorks %}
+        <div class="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-slate-200">
+        <div class="relative w-16 h-16 mb-6">
+          <div class="absolute inset-0 bg-slate-100 rounded-2xl flex items-center justify-center group-hover:bg-slate-900 transition-colors duration-300">
+            {% if step.index == 1 %}
+              <svg class="w-8 h-8 text-slate-700 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            {% elsif step.index == 2 %}
+            <svg class="w-8 h-8 text-slate-700 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            {% elsif step.index == 3 %}
+              <svg class="w-8 h-8 text-slate-700 group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            {% endif %}
+          </div>
+          <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-slate-900 rounded-full flex items-center justify-center text-white text-sm font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
+            {{ step.index }}
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-slate-900 mb-4 italic">
+          {{ step.title }}
+        </h3>
+
+        <p class="text-slate-600 leading-relaxed italic">
+          {{ step.description }}
+        </p>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
+</section>
